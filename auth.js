@@ -2,7 +2,9 @@ import {index} from "./modules";
 import {passwordCheck} from "./modules/passwordCheck.js";
 
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', go)
+
+function go () {
     const authWrapper = document.getElementById("auth-wrapper")
     const passwordInput = document.getElementById("password-input")
     const contentWrapper = document.getElementsByClassName("content-wrapper")
@@ -16,4 +18,4 @@ window.addEventListener('DOMContentLoaded', () => {
             } else e.target.value = ""
         }
     })
-})
+}
