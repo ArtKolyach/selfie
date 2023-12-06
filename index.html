@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <div class="content-wrapper hidden">
+        <div id="img-wrapper">
+            <img class="img"/>
+            <div id="frame-number">0</div>
+        </div>
+
+
+        <div class="control-buttons">
+            <input type="button" class="control-button" id="back" value="<<"/>
+            <input type="button" class="control-button" id="stop" value="||"/>
+            <input type="button" class="control-button" id="play" value=">"/>
+            <input type="button" class="control-button" id="next" value=">>"/>
+        </div>
+        <input type="range" id="input" min="500" max="970">
+    </div>
+
+    <div id="auth-wrapper">
+        <input type="password" placeholder="Введите пароль" id="password-input">
+    </div>
+
+    <script type="module" src="auth.js"/>
+</body>
+</html>
