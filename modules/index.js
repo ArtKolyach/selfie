@@ -1,5 +1,4 @@
-export function index ()
-{
+
 
     const image = document.querySelector('img')
     const input = document.getElementById('input')
@@ -77,5 +76,5 @@ export function index ()
         image.setAttribute("src", `../img/img_split/frame_${parseFrameNumber(frame)}_delay-0.05s.gif`)
         frameNumber.textContent = frame
     })
-}
+
 

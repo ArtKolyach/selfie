@@ -1,4 +1,4 @@
-import {index} from "./modules";
+//import {index} from "./modules";
 import {passwordCheck} from "./modules/passwordCheck.js";
 
 
@@ -12,7 +12,7 @@ function go () {
     passwordInput.addEventListener("keydown", (e) => {
         if (e.code === "Enter") {
             if (passwordCheck(e.target.value)) {
-                index()
+                //index()
                 contentWrapper[0].classList.remove("hidden")
                 authWrapper.hidden = true
             } else e.target.value = ""
