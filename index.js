@@ -45,7 +45,7 @@ function index() {
         intervalId = setInterval(() => {
             const frame = newFrame("forward")
             frameNumber.textContent = frame+1
-            image.setAttribute("src", `../img/img_split/frame_${parseFrameNumber(frame)}_delay-0.05s.gif`)
+            image.setAttribute("src", `https://raw.githubusercontent.com/ArtKolyach/selfie/master/img/img_split/frame_${parseFrameNumber(frame)}_delay-0.05s.gif`)
         }, 1000 - input.value)
     }
 
