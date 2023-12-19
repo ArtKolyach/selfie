@@ -1,5 +1,6 @@
 
 
+function index() {
     const image = document.querySelector('img')
     const input = document.getElementById('input')
     const playBtn = document.querySelector("#play")
@@ -42,7 +43,7 @@
     const setPhotoInterval = () => {
         intervalId = setInterval(() => {
             const frame = newFrame("forward")
-            frameNumber.textContent = frame
+            frameNumber.textContent = frame+1
             image.setAttribute("src", `../img/img_split/frame_${parseFrameNumber(frame)}_delay-0.05s.gif`)
         }, 1000 - input.value)
     }
@@ -68,13 +69,16 @@
     nextBtn.addEventListener("click", () => {
         const frame = newFrame("forward")
         image.setAttribute("src", `../img/img_split/frame_${parseFrameNumber(frame)}_delay-0.05s.gif`)
-        frameNumber.textContent = frame
+        frameNumber.textContent = frame+1
     })
 
     backBtn.addEventListener("click", () => {
         const frame = newFrame("back")
         image.setAttribute("src", `../img/img_split/frame_${parseFrameNumber(frame)}_delay-0.05s.gif`)
-        frameNumber.textContent = frame
+        frameNumber.textContent = frame+1
     })
+}
+
+window.addEventListener('DOMContentLoaded', index)
 
 

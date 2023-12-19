@@ -1,6 +1,6 @@
 img {
     object-fit: contain;
-    width: 80%;
+    width: 100%;
     position: relative;
 }
 
@@ -8,6 +8,7 @@ img {
     position: relative;
     display: flex;
     justify-content: center;
+    width: 80%;
 }
 
 #frame-number {
@@ -19,7 +20,7 @@ img {
     height: 30px;
     text-align: center;
     vertical-align: middle;
-    opacity: 50%;
+    opacity: 80%;
 }
 
 .content-wrapper {
