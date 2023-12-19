@@ -1,13 +1,14 @@
-
+const playBtn = document.querySelector("#play")
 
 function index() {
     const image = document.querySelector('img')
     const input = document.getElementById('input')
-    const playBtn = document.querySelector("#play")
     const stopBtn = document.querySelector("#stop")
     const nextBtn = document.querySelector("#next")
     const backBtn = document.querySelector('#back')
     const frameNumber = document.querySelector('#frame-number')
+
+    playBtn.removeEventListener('click', index)
 
     image.setAttribute("src", "../img/img_split/frame_00_delay-0.05s.gif")
 
@@ -79,6 +80,8 @@ function index() {
     })
 }
 
-window.addEventListener('DOMContentLoaded', index)
+//window.addEventListener('DOMContentLoaded', index)
+
+playBtn.addEventListener("click", index)
 
 
