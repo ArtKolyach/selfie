@@ -9,8 +9,9 @@ function index() {
     const frameNumber = document.querySelector('#frame-number')
 
     playBtn.removeEventListener('click', index)
+    const urlBase = 'https://raw.githubusercontent.com/ArtKolyach/selfie/master/img/img_split'
 
-    image.setAttribute("src", "../img/img_split/frame_00_delay-0.05s.gif")
+    image.setAttribute("src", `${urlBase}/frame_00_delay-0.05s.gif`)
 
     const changePhoto = () => {
         let frame = 0
@@ -45,7 +46,7 @@ function index() {
         intervalId = setInterval(() => {
             const frame = newFrame("forward")
             frameNumber.textContent = frame+1
-            image.setAttribute("src", `https://raw.githubusercontent.com/ArtKolyach/selfie/master/img/img_split/frame_${parseFrameNumber(frame)}_delay-0.05s.gif`)
+            image.setAttribute("src", `${urlBase}/frame_${parseFrameNumber(frame)}_delay-0.05s.gif`)
         }, 1000 - input.value)
     }
 
@@ -69,13 +70,13 @@ function index() {
 
     nextBtn.addEventListener("click", () => {
         const frame = newFrame("forward")
-        image.setAttribute("src", `../img/img_split/frame_${parseFrameNumber(frame)}_delay-0.05s.gif`)
+        image.setAttribute("src", `${urlBase}/frame_${parseFrameNumber(frame)}_delay-0.05s.gif`)
         frameNumber.textContent = frame+1
     })
 
     backBtn.addEventListener("click", () => {
         const frame = newFrame("back")
-        image.setAttribute("src", `../img/img_split/frame_${parseFrameNumber(frame)}_delay-0.05s.gif`)
+        image.setAttribute("src", `${urlBase}/frame_${parseFrameNumber(frame)}_delay-0.05s.gif`)
         frameNumber.textContent = frame+1
     })
 }
