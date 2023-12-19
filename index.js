@@ -80,8 +80,8 @@ function index() {
     })
 }
 
-//window.addEventListener('DOMContentLoaded', index)
+window.addEventListener('DOMContentLoaded', index)
 
-playBtn.addEventListener("click", index)
+//playBtn.addEventListener("click", index)
 
 
